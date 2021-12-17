@@ -1,6 +1,7 @@
 package lab3;
 
 public class Flight {
+    private final boolean isCancelled;
     private final float delayTime;
     private final int airportId;
     private final int destId;
