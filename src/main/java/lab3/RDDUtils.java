@@ -8,3 +8,5 @@ public class RDDUtils {
     private static final String DELIMITER = ",";
 
     private static final int IS_CANCELLED_COLUMN = 19;
+    public static JavaPairRDD<Integer, Airport> parseAirports(JavaRDD<String> airports){
+}
