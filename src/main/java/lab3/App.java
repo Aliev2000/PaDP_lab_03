@@ -10,6 +10,7 @@ import java.util.Map;
 
 public class App {
     private final SparkConf conf;
+    private static final  String OUTPUT_FILEPATH = "output";
     private static final String AIRPORTS_DATA_FILENAME="airports.csv";
     private static final String FLIGHTS_DATA_FILENAME="flights.csv";
 
