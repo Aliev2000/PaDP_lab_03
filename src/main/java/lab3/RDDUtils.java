@@ -10,6 +10,7 @@ public class RDDUtils {
     private static final int IS_CANCELLED_COLUMN = 19;
     private static final int AIRPORT_ID_COLUMN = 14;
 
+    private static final int ORIGIN_AIRPORT_ID_COLUMN = 11;
     public static JavaPairRDD<Tuple2<Integer, Integer>, Flight> parseFlightsPairRDD(JavaRDD<String> flights){
         return flights.map(str -> str.split(DELIMITER))
                       .map(str -> new Flight(str[IS_CANCELLED_COLUMN].equals(CANCELLED_FLAG),
