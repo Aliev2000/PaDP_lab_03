@@ -17,6 +17,9 @@ public class App {
         this.conf = conf;
 
     public void run(){
+        JavaPairRDD<Integer, Airport> airports;
+        JavaPairRDD<Tuple2<Integer, Integer>, Flight> flights;
+        JavaSparkContext sc = new JavaSparkContext(conf);
 
     }
 }
