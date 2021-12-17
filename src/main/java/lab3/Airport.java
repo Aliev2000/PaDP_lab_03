@@ -4,4 +4,5 @@ import java.io.Serializable;
 
 public class Airport implements Serializable {
     public String toString() {
+        return String.format("Airport{id=%d, name='%s'}", id, name);
 }
