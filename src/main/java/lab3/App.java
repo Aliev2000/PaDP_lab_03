@@ -11,5 +11,7 @@ import java.util.Map;
 public class App {
     private static final String FLIGHTS_DATA_FILENAME="flights.csv";
 
+    public App(SparkConf conf){
+
     }
 }
