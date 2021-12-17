@@ -9,4 +9,9 @@ public class Flight {
         this.destId = destId;
 
     public String toString() {
+        return String.format("Flight{isCancelled=%s, delayTime=%s, airportId=%d, destId=%d}",
+                isCancelled,
+                delayTime,
+                airportId,
+                destId);
 }
