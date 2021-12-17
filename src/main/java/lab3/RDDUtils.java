@@ -7,3 +7,4 @@ import scala.Tuple2;
 public class RDDUtils {
     private static final String DELIMITER = ",";
 
+    private static final int IS_CANCELLED_COLUMN = 19;
