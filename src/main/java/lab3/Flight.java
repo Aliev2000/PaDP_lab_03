@@ -8,3 +8,5 @@ public class Flight {
         this.airportId = airportId;
         this.destId = destId;
 
+    public String toString() {
+}
