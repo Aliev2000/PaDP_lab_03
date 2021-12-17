@@ -16,5 +16,7 @@ public class App {
     public App(SparkConf conf){
         this.conf = conf;
 
+    public void run(){
+
     }
 }
