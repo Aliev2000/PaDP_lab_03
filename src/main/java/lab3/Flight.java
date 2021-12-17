@@ -10,6 +10,7 @@ public class Flight {
         this.destId = destId;
 
     public float getDelayTime() {
+        return delayTime;
 
     public int getAirportId() {
         return airportId;
