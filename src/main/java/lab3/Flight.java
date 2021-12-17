@@ -21,6 +21,7 @@ public class Flight {
     public int getDestId() {
         return destId;
 
+    @Override
     public String toString() {
         return String.format("Flight{isCancelled=%s, delayTime=%s, airportId=%d, destId=%d}",
                 isCancelled,
