@@ -8,6 +8,8 @@ public class RDDUtils {
     private static final String DELIMITER = ",";
 
     private static final int IS_CANCELLED_COLUMN = 19;
+    private static final int AIRPORT_ID_COLUMN = 14;
+
     public static JavaPairRDD<Integer, Airport> parseAirports(JavaRDD<String> airports){
         return airports.map(str -> str.split(DELIMITER))
                        .mapToPair(str -> {
