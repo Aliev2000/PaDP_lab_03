@@ -11,6 +11,13 @@ public class RDDUtils {
     private static final int AIRPORT_ID_COLUMN = 14;
 
     public static JavaPairRDD<Tuple2<Integer, Integer>, Flight> parseFlightsPairRDD(JavaRDD<String> flights){
+        return flights.map(str -> str.split(DELIMITER))
+                      .map(str -> new Flight(str[IS_CANCELLED_COLUMN].equals(CANCELLED_FLAG),
+                                             Float.parseFloat(str[DELAY_TIME_COLUMN]),
+                                             Integer.parseInt(str[ORIGIN_AIRPORT_ID_COLUMN]),
+                                             Integer.parseInt(str[AIRPORT_ID_COLUMN])))
+                      .mapToPair(f -> new Tuple2<>(new Tuple2<>(f.getAirportId(), f.getDestId()), f));
+    }
 
     public static JavaPairRDD<Integer, Airport> parseAirports(JavaRDD<String> airports){
         return airports.map(str -> str.split(DELIMITER))
